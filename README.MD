@@ -26,6 +26,7 @@ Requirements:
     <li>The image-host-library have a complex API.
     <li>No new behaviour needed.
     <li>There are no clear layers.
+    <li>If you are not familiar with design patterns: <a href="https://springframework.guru/gang-of-four-design-patterns/">click here</a>
     </ul>
 </details>
 
