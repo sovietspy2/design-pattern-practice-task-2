@@ -3,17 +3,15 @@ package com.epam.service;
 import com.epam.image.*;
 import com.epam.model.Profile;
 
-import java.lang.String;
-
 public class ProfileService {
 
     private final DatabaseService databaseService = new DatabaseService();
 
     private static String TOKEN = "TASK_SECRET_TOKEN";
 
-    public Profile getProfile(java.lang.String id) {
+    public Profile getProfile(String id) {
 
-        java.lang.String realName = databaseService.getRealNameById(id);
+        String realName = databaseService.getRealNameById(id);
 
         ImageDownloadService imageDownloadService = new ImageDownloadServiceImpl();
 

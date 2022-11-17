@@ -22,7 +22,7 @@ public class FileService {
         return null;
     }
 
-    public UserImage downloadSomeImage(java.lang.String id) {
+    public UserImage downloadSomeImage(String id) {
 
         ImageDownloadService imageDownloadService = new ImageDownloadServiceImpl();
 

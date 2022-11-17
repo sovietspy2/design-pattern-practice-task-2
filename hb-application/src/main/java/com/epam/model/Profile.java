@@ -10,7 +10,7 @@ public class Profile {
         this.content = image;
     }
 
-    public java.lang.String getRealName() {
+    public String getRealName() {
         return realName;
     }
 
