@@ -30,4 +30,10 @@ public class ProfileService {
         return new Profile(realName, image.getContent());
     }
 
+    // DO NOT CHANGE THIS METHOD
+    public Profile saveProfile(Profile profile) {
+        // implementation
+        return null;
+    }
+
 }
