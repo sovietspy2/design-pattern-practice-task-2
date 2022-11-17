@@ -7,25 +7,13 @@ public class ProfileService {
 
     private final DatabaseService databaseService = new DatabaseService();
 
-    private static String TOKEN = "TASK_SECRET_TOKEN";
+    private final ImageDownloadFacade imageDownloadFacade = new ImageDownloadFacade();
 
     public Profile getProfile(String id) {
 
         String realName = databaseService.getRealNameById(id);
 
-        ImageDownloadService imageDownloadService = new ImageDownloadServiceImpl();
-
-        Token token = new Token(TOKEN);
-
-        ImageRequest imageRequest = new ImageRequest();
-        imageRequest.setId(id);
-
-        imageRequest.setColorSchema(ColorSchema.BW);
-        imageRequest.setFileExtension(FileExtension.JPG);
-
-        imageRequest.setQuality(Quality.LOW);
-
-        Image image = imageDownloadService.downloadImage(token, imageRequest);
+        Image image = imageDownloadFacade.download(id, Quality.LOW);
 
         return new Profile(realName, image.getContent());
     }

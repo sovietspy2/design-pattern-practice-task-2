@@ -10,6 +10,8 @@ import java.util.UUID;
 
 public class FileService {
 
+    private final ImageDownloadFacade imageDownloadFacade = new ImageDownloadFacade();
+
     // DO NOT CHANGE THIS METHOD
     public InputStream loadFileFromSystem() {
         // Implementation
@@ -24,23 +26,11 @@ public class FileService {
 
     public UserImage downloadSomeImage(String id) {
 
-        ImageDownloadService imageDownloadService = new ImageDownloadServiceImpl();
-
-        Token token = new Token("TASK_SECRET_TOKEN");
-
-        UUID uuid = createUUID();
-
-        ImageRequest imageRequest = new ImageRequest();
-        imageRequest.setColorSchema(ColorSchema.BW);
-        imageRequest.setFileExtension(FileExtension.JPG);
-        imageRequest.setId(id);
-        imageRequest.setQuality(Quality.HIGH);
-
-        Image image = imageDownloadService.downloadImage(token, imageRequest);
+        Image image = imageDownloadFacade.download(id, Quality.HIGH);
 
         return new UserImage(
                 image.getContent(),
-                uuid
+                createUUID()
         );
     }
 
