@@ -16,6 +16,7 @@ Requirements:
 - Do not change functionality
 - Implement changes to _hb-application_ project.
 - Do not change anything in the image-host-library project. You can think of it as third party dependency.
+- Feel free to add and remove files based on the rules specified earlier.
 - You can run the `hb-application/src/main/java/com/epam/Application.java` to test if the code compiles.
 
 <details>
