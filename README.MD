@@ -12,19 +12,19 @@ Comments will indicate whether a class or method is allowed to be changed or not
 
 Requirements:
 
-- Refactor the code to use a _fitting_ design pattern
-- Do not change functionality
-- Implement changes to _hb-application_ project.
-- Do not change anything in the image-host-library project. You can think of it as third party dependency.
+- Refactor the code to use a _fitting_ design pattern!
+- Do not change functionality!
+- Implement changes to _hb-application_ project!
+- Do not change anything in the image-host-library project! You can think of it as third party dependency.
 - Feel free to add and remove files based on the rules specified earlier.
-- You can run the `hb-application/src/main/java/com/epam/Application.java` to test if the code compiles.
+- You can run the `hb-application/src/main/java/com/epam/Application.java` to test if the code still works.
 
 <details>
   <summary>Hints (Check this if you feel stuck)</summary>
   <ul>
     <li>There are duplicate code parts.
     <li>The image-host-library have a complex API.
-    <li>Some parts of the complex API are not used.
+    <li>No new behaviour needed.
     <li>There are no clear layers.
     </ul>
 </details>
@@ -33,5 +33,6 @@ Requirements:
   <summary>Hints #2 (Check this if you feel REALLY stuck)</summary>
   <ul>
     <li>There is a structural design pattern that can help you.
-    </ul>
+    <li>The pattern you are looking for will simplify a complex interface.
+  </ul>
 </details>
